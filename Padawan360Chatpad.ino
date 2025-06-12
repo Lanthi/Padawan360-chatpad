@@ -4,6 +4,7 @@
 /*
 //                     Base Chatpad with 2 MAESTROS code for R2D2
 //                            Coding done By JUSTIN HALL
+//                                   Mod by Lanthi
 
 */
 
