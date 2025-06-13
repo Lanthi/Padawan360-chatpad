@@ -1004,6 +1004,10 @@ void Check_Chatpad() {
   }
 ```
 
-Don't forget to add all the libraries in the "Library" folder
+Don't forget to add all the libraries to the "Library" folder. Especially "Chatpad-master.zip", "SeqTimer-master.zip", and "USB_Host_Shield_2.0-xbox-chatpad.zip". If you already have them and it asks you to overwrite them, do so. They're modified to avoid errors.
+If you have the "USB_Host_Shield_20" library, you should delete it to avoid conflicts.
+
+I hope it's useful to you, and I hope you see your R2D2 working, with thousands of cool movements.
+Thanks
 
   
