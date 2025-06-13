@@ -1,26 +1,32 @@
 Guys, I present my Padawan360 mod with ChatPad. With all the functional keys and their modifiers.
+
 The keyboard has 43 keys and 4 modifiers, giving you 215 completely independent functions. You can program them to your liking, with commands for servos, lights, motors, etc.
+
+Each key has 5 functions: the normal one with direct pressing, plus 4 modifiers: "Shift, Green Button, Orange Button, and Messager." Press the modifier and then press the key. You don't need to press both at the same time. Press the modifier and then any of the 43 keys on the keyboard.
 
 The "USB Host Shield 2.0" library has been modified to add the chatpad. (There are other libraries on GitHub, but they don't currently work.)
 
 You can use this code for your Arduino project; to do so, add the following lines to your code:
+
 Main code:
-#include <Chatpad.h>
+```
 /************* Xbox360 Chatpad Configuration ******************/
+#include <Chatpad.h>
 #define CHATPAD //Uncomment if using a chatpad
 bool Mod_Shift = false;
 bool Mod_Green = false;
 bool Mod_Messenger = false;
 bool Mod_Orange = false;
 /************** End Configuration *******************************/
-
+```
 In void loop:
-
+```
 #if defined(CHATPAD) 
 Check_Chatpad();
 #endif
-
+```
 And at the end of your code add "void Check_Chatpad()"
+```
 void Check_Chatpad() {
   if (Xbox.getChatpadClick(XBOX_CHATPAD_D1, 0)) {
     if (Mod_Shift == true) {
@@ -996,7 +1002,7 @@ void Check_Chatpad() {
       //Press the Messenger button and any button on the chatpad, you get double the functions
     }
   }
-
+```
 
 Don't forget to add all the libraries in the "Library" folder
 
